@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/screens/description/widgets/absorb_pointer.dart';
 import 'package:flutter_learn/screens/homepage/homepage.dart';
 
 void main() {
@@ -15,6 +16,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialRoute: '/',
+      routes: {
+        Homepage.routeName: (context) => const Homepage(),
+        LearnAbsorbPointer.routeName: (context) => const LearnAbsorbPointer(),
+      },
       home: const Homepage(),
     );
   }
