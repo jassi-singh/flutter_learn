@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn/screens/description.dart';
+import 'package:flutter_learn/screens/description/description.dart';
 import 'package:flutter_learn/screens/description/widgets/absorb_pointer.dart';
+import 'package:flutter_learn/screens/description/widgets/align.dart';
+import 'package:flutter_learn/screens/description/widgets/image.dart';
 import 'package:flutter_learn/screens/homepage/homepage.dart';
 
 import 'models/card_info_model.dart';
@@ -36,6 +38,15 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(
               builder: (context) => const LearnAbsorbPointer(),
             );
+          case LearnAlign.routeName:
+            return MaterialPageRoute(
+              builder: (context) => const LearnAlign(),
+            );
+          case LearnImage.routeName:
+            return MaterialPageRoute(
+              builder: (context) => const LearnImage(),
+            );
+
           default:
             return MaterialPageRoute(
               builder: (context) => const Center(

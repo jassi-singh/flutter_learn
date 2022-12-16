@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/screens/description/widgets/image.dart';
 
-import '../models/card_info_model.dart';
-import 'description/widgets/absorb_pointer.dart';
-import 'description/widgets/align.dart';
+import '../../models/card_info_model.dart';
+import 'widgets/absorb_pointer.dart';
+import 'widgets/align.dart';
 
 class Description extends StatelessWidget {
   final CardInfo cardInfo;
@@ -26,6 +27,8 @@ class Description extends StatelessWidget {
         return const LearnAbsorbPointer();
       case Screens.learnAlign:
         return const LearnAlign();
+      case Screens.learnImage:
+        return const LearnImage();
       default:
         return const Center(child: Text("No route found"));
     }

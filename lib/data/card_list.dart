@@ -1,6 +1,7 @@
 import '../models/card_info_model.dart';
 import '../screens/description/widgets/absorb_pointer.dart';
 import '../screens/description/widgets/align.dart';
+import '../screens/description/widgets/image.dart';
 
 List<CardInfo> cardsList = [
   CardInfo(
@@ -13,5 +14,9 @@ List<CardInfo> cardsList = [
     routeName: LearnAlign.routeName,
     screen: Screens.learnAlign,
   ),
-  
+  CardInfo(
+    title: 'Image',
+    routeName: LearnImage.routeName,
+    screen: Screens.learnImage,
+  ),
 ];

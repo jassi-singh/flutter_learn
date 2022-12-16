@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/data/card_list.dart';
-import 'package:flutter_learn/screens/description.dart';
+import 'package:flutter_learn/screens/description/description.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);

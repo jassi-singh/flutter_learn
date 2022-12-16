@@ -2,6 +2,7 @@ enum Screens {
   homepage,
   learnAbsorbPointer,
   learnAlign,
+  learnImage,
 }
 
 class CardInfo {
