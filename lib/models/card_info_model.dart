@@ -3,6 +3,8 @@ enum Screens {
   learnAbsorbPointer,
   learnAlign,
   learnImage,
+  razorpayDemo,
+  agoraDemo
 }
 
 class CardInfo {

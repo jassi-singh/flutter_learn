@@ -3,8 +3,8 @@ import 'package:flutter_learn/screens/description/description.dart';
 import 'package:flutter_learn/screens/description/widgets/absorb_pointer.dart';
 import 'package:flutter_learn/screens/description/widgets/align.dart';
 import 'package:flutter_learn/screens/description/widgets/image.dart';
+import 'package:flutter_learn/screens/description/widgets/razorpay_demo.dart';
 import 'package:flutter_learn/screens/homepage/homepage.dart';
-
 import 'models/card_info_model.dart';
 
 void main() {
@@ -45,6 +45,10 @@ class MyApp extends StatelessWidget {
           case LearnImage.routeName:
             return MaterialPageRoute(
               builder: (context) => const LearnImage(),
+            );
+          case RazorpayDemo.routeName:
+            return MaterialPageRoute(
+              builder: (context) => const RazorpayDemo(),
             );
 
           default:

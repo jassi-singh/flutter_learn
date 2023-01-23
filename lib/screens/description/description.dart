@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn/screens/description/widgets/image.dart';
+import 'package:flutter_learn/screens/description/widgets/razorpay_demo.dart';
 
 import '../../models/card_info_model.dart';
 import 'widgets/absorb_pointer.dart';
@@ -29,6 +30,8 @@ class Description extends StatelessWidget {
         return const LearnAlign();
       case Screens.learnImage:
         return const LearnImage();
+      case Screens.razorpayDemo:
+        return const RazorpayDemo();
       default:
         return const Center(child: Text("No route found"));
     }
