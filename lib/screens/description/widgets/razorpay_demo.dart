@@ -37,7 +37,7 @@ class _RazorpayDemoState extends State<RazorpayDemo> {
               onPressed: () {
                 Razorpay razorpay = Razorpay();
                 var options = {
-                  'key': 'rzp_live_xJfd4CfsfKS9pb',
+                  'key': '',
                   'amount': 100,
                   'entity': 'payment',
                   'name': 'Acme Corp.',
