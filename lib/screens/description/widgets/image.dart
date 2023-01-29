@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class LearnImage extends StatelessWidget {
   const LearnImage({Key? key}) : super(key: key);
-  static const routeName = '/learnImage';
+
   @override
   Widget build(BuildContext context) {
     return Center(

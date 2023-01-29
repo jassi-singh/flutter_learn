@@ -1,13 +1,26 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/firebase_options.dart';
+import 'package:flutter_learn/screens/calling/calling_screen.dart';
 import 'package:flutter_learn/screens/description/description.dart';
-import 'package:flutter_learn/screens/description/widgets/absorb_pointer.dart';
-import 'package:flutter_learn/screens/description/widgets/align.dart';
-import 'package:flutter_learn/screens/description/widgets/image.dart';
-import 'package:flutter_learn/screens/description/widgets/razorpay_demo.dart';
 import 'package:flutter_learn/screens/homepage/homepage.dart';
+import 'package:flutter_learn/utils/app_utils.dart';
+import 'package:flutter_learn/utils/auth_service.dart';
+import 'package:flutter_learn/utils/notification_service.dart';
 import 'models/card_info_model.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  final _notificationService = NotificationService();
+  final _authService = AuthService();
+  if (!kIsWeb) {
+    await _notificationService.initialize();
+  }
+  await _authService.initialize();
   runApp(const MyApp());
 }
 
@@ -18,10 +31,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Learn Flutter',
+      navigatorKey: AppUtils.navigatorKey,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: AppUtils.initialRoute,
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case Homepage.routeName:
@@ -34,23 +48,10 @@ class MyApp extends StatelessWidget {
                 cardInfo: settings.arguments as CardInfo,
               ),
             );
-          case LearnAbsorbPointer.routeName:
+          case CallLockScreen.routeName:
             return MaterialPageRoute(
-              builder: (context) => const LearnAbsorbPointer(),
+              builder: (context) => const CallLockScreen(),
             );
-          case LearnAlign.routeName:
-            return MaterialPageRoute(
-              builder: (context) => const LearnAlign(),
-            );
-          case LearnImage.routeName:
-            return MaterialPageRoute(
-              builder: (context) => const LearnImage(),
-            );
-          case RazorpayDemo.routeName:
-            return MaterialPageRoute(
-              builder: (context) => const RazorpayDemo(),
-            );
-
           default:
             return MaterialPageRoute(
               builder: (context) => const Center(

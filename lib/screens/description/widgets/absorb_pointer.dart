@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 class LearnAbsorbPointer extends StatelessWidget {
   const LearnAbsorbPointer({Key? key}) : super(key: key);
 
-  static const routeName = '/learnAbsorbPointer';
-
   @override
   Widget build(BuildContext context) {
     return Center(

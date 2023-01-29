@@ -3,7 +3,6 @@ import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class RazorpayDemo extends StatefulWidget {
   const RazorpayDemo({Key? key}) : super(key: key);
-  static const routeName = '/razorpayDemo';
   @override
   State<RazorpayDemo> createState() => _RazorpayDemoState();
 }

@@ -16,8 +16,6 @@ enum AlignType {
 class LearnAlign extends StatefulWidget {
   const LearnAlign({Key? key}) : super(key: key);
 
-  static const routeName = '/learnAlign';
-
   @override
   State<LearnAlign> createState() => _LearnAlignState();
 }

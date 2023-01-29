@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn/screens/description/widgets/firebase_auth_demo.dart';
 import 'package:flutter_learn/screens/description/widgets/image.dart';
+import 'package:flutter_learn/screens/description/widgets/notification_demo.dart';
 import 'package:flutter_learn/screens/description/widgets/razorpay_demo.dart';
 
 import '../../models/card_info_model.dart';
@@ -24,16 +26,22 @@ class Description extends StatelessWidget {
 
   _showBody() {
     switch (cardInfo.screen) {
-      case Screens.learnAbsorbPointer:
+      case DescriptionScreens.learnAbsorbPointer:
         return const LearnAbsorbPointer();
-      case Screens.learnAlign:
+      case DescriptionScreens.learnAlign:
         return const LearnAlign();
-      case Screens.learnImage:
+      case DescriptionScreens.learnImage:
         return const LearnImage();
-      case Screens.razorpayDemo:
+      case DescriptionScreens.razorpayDemo:
         return const RazorpayDemo();
+      case DescriptionScreens.notificationDemo:
+        return NotificationDemo();
+      case DescriptionScreens.firebaseAuthDemo:
+        return FirebaseAuthDemo();
       default:
-        return const Center(child: Text("No route found"));
+        return const Center(
+          child: Text("No route found"),
+        );
     }
   }
 }

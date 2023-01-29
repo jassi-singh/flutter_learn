@@ -1,19 +1,18 @@
-enum Screens {
+enum DescriptionScreens {
   homepage,
   learnAbsorbPointer,
   learnAlign,
   learnImage,
   razorpayDemo,
-  agoraDemo
+  notificationDemo,
+  firebaseAuthDemo,
 }
 
 class CardInfo {
   String title;
-  String routeName;
-  Screens screen;
+  DescriptionScreens screen;
   CardInfo({
     required this.title,
-    required this.routeName,
     required this.screen,
   });
 }
